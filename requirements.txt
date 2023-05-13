@@ -1,6 +1,7 @@
 asgiref
 beautifulsoup4
 blinker
+flask_cors
 certifi
 charset-normalizer
 click

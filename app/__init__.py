@@ -1,6 +1,7 @@
 from flask import Flask, request
 from PIL import Image
 import cv2
+from flask_cors import CORS
 import numpy as np
 from sklearn import svm
 from skimage.feature import hog
@@ -9,6 +10,8 @@ import joblib
 
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
 clf = svm.SVC(decision_function_shape='ovo')
 
 @app.route('/process-image', methods=['POST'])
