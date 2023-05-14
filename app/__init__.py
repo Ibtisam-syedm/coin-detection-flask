@@ -173,7 +173,7 @@ def filtered_circles(circles):
 # input blurred image from preprocessing
 def extract_coin_shape(gray_image, center, radius):
     x, y = center
-    r = int(radius * 1.1)
+    r = int(radius * 1)
     return gray_image[y - r: y + r, x - r: x + r]
 
 
